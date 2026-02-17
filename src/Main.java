@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -29,6 +30,7 @@ public class Main {
          */
 
         //Zadatak 3 - FizzBuzz:
+        /*
         for (int i = 1; i <= 100; i++) {
             if (i%3==0 && i%5==0){
                 System.out.println("FizzBuzz");
@@ -41,6 +43,19 @@ public class Main {
             }
             else System.out.println(i);
         }
+
+         */
+
+        //Zadatak 4 - Polja Brojeva:
+        Scanner input = new Scanner(System.in);
+        System.out.print("Koliko brojeva želite u polju? ");
+        int koliko = input.nextInt();
+        int[] poljeBrojeva = new int[koliko];
+        for (int i = 0; i < koliko; i++) {
+            System.out.print("Unesite broj u polje: ");
+            poljeBrojeva[i] = input.nextInt();
+        }
+        System.out.println("Najveći broj je: " + Arrays.stream(poljeBrojeva).max().getAsInt() + " Najmanji broj je: " + Arrays.stream(poljeBrojeva).min().getAsInt());
     }
 
 }
